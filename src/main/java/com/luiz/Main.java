@@ -1,7 +1,7 @@
 package com.luiz;
 
 
-import com.luiz.lista01.ExercicioQuatro;
+import com.luiz.lista01.ExercicioCinco;
 
 import java.util.Scanner;
 
@@ -11,16 +11,27 @@ public class Main {
         double a, b, c;
 
         Scanner sc = new Scanner(System.in);
-        ExercicioQuatro exQuatro = new ExercicioQuatro();
+        ExercicioCinco exCinco = new ExercicioCinco();
 
         System.out.print("Digite o valor de a: ");
-        a = sc.nextDouble();
+        exCinco.setA(a = sc.nextDouble());
         System.out.print("Digite o valor de b: ");
-        b = sc.nextDouble();
+        exCinco.setB(b = sc.nextDouble());
         System.out.print("Digite o valor de c: ");
-        c = sc.nextDouble();
+        exCinco.setC(c = sc.nextDouble());
 
-        System.out.print("\nO valor de delta foi: "+exQuatro.calcularDelta(a,b,c));
+        System.out.print("Valor de delta: "+exCinco.calcularDelta(a,b,c));
+
+
+        if (exCinco.calcularDelta(a,b,c) < 0){
+            System.out.println("\nRaizes complexas 0");
+        }else{
+            double[] raizes = exCinco.calcularRaiz();
+
+            System.out.print("\nValor da raiz 1 = " + raizes[0]);
+            System.out.print("\nValor da raiz 2 = " + raizes[1]);
+        }
+
 
     }
 }
