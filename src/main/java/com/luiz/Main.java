@@ -1,6 +1,6 @@
 package com.luiz;
 
-import com.luiz.lista01.ExercicioUm;
+import com.luiz.lista01.ExercicioDois;
 import java.util.Scanner;
 
 public class Main {
@@ -9,15 +9,15 @@ public class Main {
         double num;
 
         Scanner sc = new Scanner(System.in);
-        ExercicioUm exUm = new ExercicioUm();
+        ExercicioDois exDois = new ExercicioDois();
 
         System.out.print("Digite um numero: ");
         num = sc.nextDouble();
 
-        if(exUm.isPositivo(num)){
-            System.out.print("O numero "+num+" e positivo");
+        if(exDois.isZero(num)){
+            System.out.print("O numero "+num+" e zero");
         }else{
-            System.out.print("O numero "+num+" e negativo");
+            System.out.print("O numero "+num+" nao e zero");
         }
 
 
