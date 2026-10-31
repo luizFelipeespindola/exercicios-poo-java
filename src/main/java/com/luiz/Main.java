@@ -1,14 +1,14 @@
 package com.luiz;
 
-import com.luiz.lista02.ExercicioTres;
+import com.luiz.lista02.ExercicioQuatro;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        int num1, num2, maiorNumero;
+        int num1, num2, menorNumero;
 
-        ExercicioTres exTres = new ExercicioTres();
+        ExercicioQuatro exTres = new ExercicioQuatro();
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite um valor inteiro: ");
@@ -16,9 +16,9 @@ public class Main {
         System.out.print("Digite outro valor inteiro: ");
         num2 = sc.nextInt();
 
-        maiorNumero = exTres.verificarMaiorNumero(num1,num2);
+        menorNumero = exTres.verificarMenorNumero(num1,num2);
 
-        System.out.println("O maior numero é: "+maiorNumero );
+        System.out.println("O menor numero é: "+ menorNumero);
 
     }
 }
