@@ -1,26 +1,21 @@
 package com.luiz;
 
-import com.luiz.lista02.ExercicioOito;
+import com.luiz.lista02.ExercicioNove;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        String resposta;
+        ExercicioNove exNove = new ExercicioNove();
 
-        ExercicioOito exOito = new ExercicioOito();
-        Scanner sc = new Scanner(System.in);
+        int[] resultados = exNove.simularJogadas();
 
-        do {
-            System.out.print("Gostaria de lançar um dado? [s/n]: ");
-            resposta = sc.nextLine();
+        for(int i = 0; i < resultados.length; i++){
 
-            if (resposta.equalsIgnoreCase("s")){
-                System.out.println(exOito.jogarDado());
-            }
+            double porcentagem = resultados[i] / 10000.0;
 
-
-        }while (resposta.equalsIgnoreCase("s"));
+            System.out.printf("%d: %d - %.2f%%%n",i + 1, resultados[i], porcentagem);
+        }
 
     }
 }
