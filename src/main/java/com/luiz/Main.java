@@ -1,37 +1,25 @@
 package com.luiz;
 
 
-import com.luiz.lista01.ExercicioCinco;
-
+import com.luiz.lista02.ExercicioUm;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        double a, b, c;
+        int num1, num2, maiorNumero;
 
+        ExercicioUm exUm = new ExercicioUm();
         Scanner sc = new Scanner(System.in);
-        ExercicioCinco exCinco = new ExercicioCinco();
 
-        System.out.print("Digite o valor de a: ");
-        exCinco.setA(a = sc.nextDouble());
-        System.out.print("Digite o valor de b: ");
-        exCinco.setB(b = sc.nextDouble());
-        System.out.print("Digite o valor de c: ");
-        exCinco.setC(c = sc.nextDouble());
+        System.out.print("Digite um valor inteiro: ");
+        num1 = sc.nextInt();
+        System.out.print("Digite outro valor inteiro: ");
+        num2 = sc.nextInt();
 
-        System.out.print("Valor de delta: "+exCinco.calcularDelta(a,b,c));
+        maiorNumero = exUm.verificarMaiorNumero(num1,num2);
 
-
-        if (exCinco.calcularDelta(a,b,c) < 0){
-            System.out.println("\nRaizes complexas 0");
-        }else{
-            double[] raizes = exCinco.calcularRaiz();
-
-            System.out.print("\nValor da raiz 1 = " + raizes[0]);
-            System.out.print("\nValor da raiz 2 = " + raizes[1]);
-        }
-
+        System.out.println("O maior numero é: "+ maiorNumero);
 
     }
 }
